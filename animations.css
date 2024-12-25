@@ -1,0 +1,70 @@
+/* Fade In Animation */
+[data-aos] {
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+}
+
+/* Section Animations */
+.hero-content {
+    animation: slideInLeft 1s ease-out;
+}
+
+.hero-image {
+    animation: slideInRight 1s ease-out;
+}
+
+/* Keyframes */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* AOS Animations */
+[data-aos="fade-up"] {
+    transform: translateY(50px);
+}
+
+[data-aos="fade-left"] {
+    transform: translateX(-50px);
+}
+
+[data-aos="fade-right"] {
+    transform: translateX(50px);
+}
+
+/* Smooth transitions */
+.project-card,
+.skill-bar,
+.timeline-item {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effects */
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.skill-bar:hover .progress {
+    transform: scaleX(1.02);
+}
